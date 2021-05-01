@@ -18,8 +18,8 @@ describe('Card', () => {
 
     it('stores date, deposit and balance into transactionHistory', () => {
       card.deposit(100);
-      var date = card.dateHelper();
-      expect(card.transactionHistory[0]).toEqual({date: date, type: "deposit", balance: 100})
+      var date = new Date;
+      expect(card.transactionHistory[0]).toEqual({date: date, type: "deposit", amount: 100, balance: 100})
     });
   });
 
@@ -37,8 +37,8 @@ describe('Card', () => {
     it('stores date, deposit and balance into transactionHistory', () => {
       card.deposit(100);
       card.withdraw(50);
-      var date = card.dateHelper();
-      expect(card.transactionHistory[1]).toEqual({date: date, type: "withdrawal", balance: 50})
+      var date = new Date;
+      expect(card.transactionHistory[1]).toEqual({date: date, type: "withdrawal", amount: 50, balance: 50})
     });
   });
 
