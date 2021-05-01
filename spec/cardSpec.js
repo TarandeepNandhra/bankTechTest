@@ -33,6 +33,13 @@ describe('Card', () => {
     it('throws an error if there is not succifcient balance', () => {
       expect(function() { card.withdraw(50); } ).toThrow(new Error("Withdrawal amount exceeds balance"))
     });
+
+    it('stores date, deposit and balance into transactionHistory', () => {
+      card.deposit(100);
+      card.withdraw(50);
+      var date = card.dateHelper();
+      expect(card.transactionHistory[1]).toEqual({date: date, type: "withdrawal", balance: 50})
+    });
   });
 
 });

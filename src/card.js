@@ -15,6 +15,8 @@ class Card {
       throw new Error("Withdrawal amount exceeds balance");
     }
     this.balance -= amount;
+    var date = this.dateHelper();
+    this.transactionHistory.push({date: date, type: "withdrawal", balance: this.balance})
   }
 
   dateHelper() {
