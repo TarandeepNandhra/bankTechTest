@@ -6,11 +6,7 @@ class Card {
 
   deposit(amount) {
     this.balance += amount;
-    var date = new Date;
-    var day = date.getUTCDate(); 
-    var month = date.getUTCMonth() + 1;
-    var year = date.getFullYear();
-    date = `${day}/${month}/${year}`
+    var date = this.dateHelper();
     this.transactionHistory.push({date: date, type: "deposit", balance: this.balance})
   }
 
@@ -19,5 +15,13 @@ class Card {
       throw new Error("Withdrawal amount exceeds balance");
     }
     this.balance -= amount;
+  }
+
+  dateHelper() {
+    var date = new Date;
+    var day = date.getUTCDate(); 
+    var month = date.getUTCMonth() + 1;
+    var year = date.getFullYear();
+    return `${day}/${month}/${year}`;
   }
 }
