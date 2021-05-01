@@ -1,9 +1,9 @@
-class Card {
+class Bank {
   constructor() {
-    this.balance = 0;
+    this.customers = [];
   }
 
-  deposit(amount) {
-    this.balance += amount;
+  newCustomer() {
+    this.customers.push(new Card);
   }
 }

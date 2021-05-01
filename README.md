@@ -46,6 +46,9 @@ Rough user stories
 - user can only withdraw an amount < than current balance, otherwise throws an error
 - After a successful deposit or withdrawal, card stores transaction history (date, deb or cred/ balance after)
 
-- bank class stores instances of card class
+- bank class creates and stores instances of card class
 - bank generates a user's statement using their instance of card
 - statement is generated in reverse chronological order.
+
+Extras:
+- newCustomer method could set customer name and initial balance
