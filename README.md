@@ -51,4 +51,6 @@ Rough user stories
 - statement is generated in reverse chronological order.
 
 Extras:
-- newCustomer method could set customer name and initial balance
+- newCustomer method could set customer name, account number (unique), pin and initial balance
+- Authentication for a user to access their card and statement using a pin (and account number)
+- UI on command line or web or mobile.
