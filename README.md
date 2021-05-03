@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/taran314/bankTechTest.svg?branch=main)](https://travis-ci.com/taran314/bankTechTest)
+<br />
 # Bank tech test
 
 Today, you'll practice doing a tech test.
