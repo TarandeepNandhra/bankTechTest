@@ -1,5 +1,5 @@
 describe('Card', () => {
-
+  var Card = require('../lib/card.js');
   var card;
 
   beforeEach(() => {

@@ -1,4 +1,6 @@
 describe('Bank', () => {
+  var Bank = require('../lib/bank.js');
+  var Card = require('../lib/card.js');
   var bank;
   
   beforeEach(() => {
