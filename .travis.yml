@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - 14
+
+dist: xenial
+services:
+  - xvfb  # this adds display support to allow browser action
+
+addons:
+  chrome: stable
