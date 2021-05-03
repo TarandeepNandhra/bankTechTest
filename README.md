@@ -39,6 +39,8 @@ date || credit || debit || balance
 
 Two classes: Bank (transactions, bankStatement) and Card (balance, deposit, withdraw)
 
+Tested using Jasmine, Karama, ESlint and Travis.
+
 Rough user stories
 
 - card starts with balance 0
