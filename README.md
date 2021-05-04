@@ -38,18 +38,25 @@ date || credit || debit || balance
 - run `npm i` to install dependencies
 - run `npm test` to run tests
 - To check coverage open index.html in coverage directory
+- To manually test code in a console, open test.html (Feature test is automated also)
 
 ## Implementation
 
-- deposits and withdrawals will both act on balance -> closely linked
+- Deposits and withdrawals both act on balance -> closely linked
 - Account statement acts upon transaction data: (date, amount, balance)
 
-Two classes: Bank (transactions, bankStatement) and Card (balance, deposit, withdraw)
+Two classes: 
+- Bank: customers stores Cards and generateStatement
+- Card: balance, deposit, withdraw and stores transactions 
+
+Could have added a third for creating transactions and generating statements.
 
 ## Dependencies
 - Jasmine for unit testing
 - ESlint for linting
-- Karma and Travis for Ci and test coverage
+- Karma for running tests
+- Istanbul for coverage
+- Travis for CI
 
 ## Rough user stories
 - card starts with balance 0

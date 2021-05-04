@@ -6,7 +6,7 @@ describe('Card', () => {
   });
 
   it('Has a balance attribute, set to 0 initiallity', () => {
-    expect(card.balance).toEqual(0)
+    expect(card.balance).toEqual(0);
   });
 
   describe('A card can make deposits', () => {
@@ -18,7 +18,7 @@ describe('Card', () => {
     it('stores date, deposit and balance into transactionHistory', () => {
       card.deposit(100);
       var date = new Date;
-      expect(card.transactionHistory[0]).toEqual({date: date, type: "deposit", amount: 100, balance: 100})
+      expect(card.transactionHistory[0]).toEqual({date: date, type: "deposit", amount: 100, balance: 100});
     });
   });
 
@@ -30,14 +30,14 @@ describe('Card', () => {
     });
 
     it('throws an error if there is not succifcient balance', () => {
-      expect(function() { card.withdraw(50); } ).toThrow(new Error("Withdrawal amount exceeds balance"))
+      expect(function() { card.withdraw(50); } ).toThrow(new Error("Withdrawal amount exceeds balance"));
     });
 
     it('stores date, deposit and balance into transactionHistory', () => {
       card.deposit(100);
       card.withdraw(50);
       var date = new Date;
-      expect(card.transactionHistory[1]).toEqual({date: date, type: "withdrawal", amount: 50, balance: 50})
+      expect(card.transactionHistory[1]).toEqual({date: date, type: "withdrawal", amount: 50, balance: 50});
     });
   });
 
