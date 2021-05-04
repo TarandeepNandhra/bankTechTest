@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('Transaction', () => {
   var transactions;
 
@@ -5,15 +6,7 @@ describe('Transaction', () => {
     transactions = new Transaction;
   });
 
-  it('Has a balance attribute, set to 0 initiallity', () => {
-    expect(transactions.balance).toEqual(0);
-  });
-
   describe('A transaction can make deposits', () => {
-    it('can increase the account balance by amount deposited', () => {
-      transactions.deposit(100);
-      expect(transactions.balance).toEqual(100);
-    });
 
     it('stores date, deposit and balance into transactionHistory', () => {
       transactions.deposit(100);
@@ -23,12 +16,6 @@ describe('Transaction', () => {
   });
 
   describe('A transaction can make withdrawls', () => {
-    it('can withdraw money if there is sufficient balance ', () => {
-      transactions.deposit(100);
-      transactions.withdraw(50);
-      expect(transactions.balance).toEqual(50);
-    });
-
     it('stores date, deposit and balance into transactionHistory', () => {
       transactions.deposit(100);
       transactions.withdraw(50);

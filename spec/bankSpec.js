@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('Bank', () => {
   var bank;
   
