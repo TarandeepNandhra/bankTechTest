@@ -33,6 +33,11 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+## Instructions
+- Clone the repo
+- run `npm i` to install dependencies
+- run `npm test` to run tests
+- To check coverage open index.html in coverage directory
 
 ## Implementation
 
@@ -41,10 +46,12 @@ date || credit || debit || balance
 
 Two classes: Bank (transactions, bankStatement) and Card (balance, deposit, withdraw)
 
-Tested using Jasmine, Karama, ESlint and Travis.
+## Dependencies
+- Jasmine for unit testing
+- ESlint for linting
+- Karma and Travis for Ci and test coverage
 
-Rough user stories
-
+## Rough user stories
 - card starts with balance 0
 - user can deposit money to card
 - user can only withdraw an amount < than current balance, otherwise throws an error
