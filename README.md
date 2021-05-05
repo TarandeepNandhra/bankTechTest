@@ -36,9 +36,15 @@ date || credit || debit || balance
 ## Instructions
 - Clone the repo
 - run `npm i` to install dependencies
-- run `npm test` to run tests
-- To check coverage open index.html in coverage directory
-- To manually test code in a console, open test.html (Feature test is automated also)
+- run `npm test` to run unit and feature tests
+- To check coverage open index.html in coverage directory (100%)
+
+## Dependencies
+- Jasmine for unit testing
+- ESlint for linting
+- Karma for running tests
+- Istanbul for coverage
+- Travis for CI
 
 ## Implementation
 
@@ -51,12 +57,16 @@ Two classes:
 
 Could have added a third for creating transactions and generating statements.
 
-## Dependencies
-- Jasmine for unit testing
-- ESlint for linting
-- Karma for running tests
-- Istanbul for coverage
-- Travis for CI
+After first code review
+--------
+- SRP concerns have been addressed by creating a statementFormatter class and using forwarding.
+- Classes now have the following responsibilities:
+  - Bank: Allows user to interact (make deposits, withdrawals and print their statement) by forwarding to Transaction and StatementFormatter.
+  - Transaction: Handles logic for transactions (deposit or withdrawals), storing data in StatementFormatter.
+  - StatementFormatter: Format's a users' statement using transactionHistory.
+- Used logic to calculate a user's balance, rather than duplicating information by storing balance as an instance variable
+- User now only interacts with Bank class.
+- Feature test is working but could not find a way to test on stdout (so returning as a string also)
 
 ## Rough user stories
 - card starts with balance 0
