@@ -7,9 +7,8 @@ describe('Feature test', () => {
     bank.deposit(100);
     bank.deposit(200);
     bank.withdraw(200);
-    expect(bank.printStatement()).toMatch(/date || credit || debit || balance/)
-    expect(bank.printStatement()).toMatch(/|| || 200.00 || 100.00/)
-    expect(bank.printStatement()).toMatch(/|| 200.00 || || 300.00/)
-    expect(bank.printStatement()).toMatch(/||| 100.00 || || 100.00/)
+    spyOn(console, 'log');
+    bank.printStatement();
+    expect(console.log).toHaveBeenCalledWith('date || credit || debit || balance\n5/5/2021 || || 200.00 || 100.00\n5/5/2021 || 200.00 || || 300.00\n5/5/2021 || 100.00 || || 100.00');
   });
 });
