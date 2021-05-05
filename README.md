@@ -35,8 +35,8 @@ date || credit || debit || balance
 ```
 ## Instructions
 - Clone the repo
-- run `npm i` to install dependencies
-- run `npm test` to run unit and feature tests
+- Run `npm i` to install dependencies
+- Run `npm test` to run unit and feature tests
 - To check coverage open index.html in coverage directory (100%)
 
 ## Dependencies
@@ -70,15 +70,15 @@ After first code review
 - Allowed for a negative balance, as specification does not explicitly rule this out
 
 ## Rough user stories
-- card starts with balance 0
-- user can deposit money to card
-- user can only withdraw an amount < than current balance, otherwise throws an error
+- Card starts with balance 0
+- User can deposit money to card
+- User can only withdraw an amount < than current balance, otherwise throws an error
 - After a successful deposit or withdrawal, card stores transaction history (date, deb or cred/ balance after)
-- bank class creates and stores instances of card class
-- bank generates a user's statement using their instance of card
-- statement is generated in reverse chronological order.
+- Bank class creates and stores instances of card class
+- Bank generates a user's statement using their instance of card
+- Statement is generated in reverse chronological order.
 
 Extras:
-- newCustomer method could set customer name, account number (unique), pin and initial balance
+- NewCustomer method could set customer name, account number (unique), pin and initial balance
 - Authentication for a user to access their card and statement using a pin (and account number)
 - UI on command line or web or mobile.
